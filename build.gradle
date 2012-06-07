@@ -6,7 +6,7 @@ version = '0.9.0.1'
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Java File Parser API', 'Implementation-Version': version
+        attributes 'Implementation-Title': 'Mai - Java Fixed Width File Parser API', 'Implementation-Version': version
     }
 }
 
