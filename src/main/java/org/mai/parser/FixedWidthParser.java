@@ -6,9 +6,14 @@ import org.mai.type.FixedWidthEntity;
 
 public class FixedWidthParser<T> {
 
-	public T parse(Class<T> clazz, String lineToParse) throws InstantiationException, IllegalAccessException {
+	public T parse(Class<T> clazz, String lineToParse) {
 		if (isValidClassType(clazz)) {
-			T returnInstance = clazz.newInstance();
+			T returnInstance;
+			try {
+				returnInstance = clazz.newInstance();
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
 			return returnInstance;
 		}
 

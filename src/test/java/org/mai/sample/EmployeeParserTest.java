@@ -15,7 +15,7 @@ import org.mai.parser.FixedWidthParser;
 public class EmployeeParserTest {
 
 	@Test
-	public void testIfInstanceIsCreated() throws InstantiationException, IllegalAccessException {
+	public void testIfInstanceIsCreated() {
 
 		Employee employee = new FixedWidthParser<Employee>().parse(Employee.class, null);
 		assertNotNull(employee);
